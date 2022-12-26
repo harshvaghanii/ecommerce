@@ -27,9 +27,9 @@ const Container = styled.div`
     align-items: center;
     justify-content: center;
     width: 23%;
+    min-width: 280px;
     margin: 5px;
     height: 350px;
-    margin-right: 20px;
     background-color: #f5fbfd;
     position: relative;
 

@@ -3,11 +3,14 @@ import { Search, ShoppingCartOutlined } from "@material-ui/icons";
 
 import React from "react";
 import styled from "styled-components";
-
+import { mobile } from "../responsive";
 // Start of styled components
 
 const Container = styled.div`
     height: 60px;
+    ${mobile({
+        height: "50px",
+    })}
 `;
 
 const Wrapper = styled.div`
@@ -15,6 +18,10 @@ const Wrapper = styled.div`
     display: flex;
     justify-content: space-between;
     align-items: center;
+    ${mobile({
+        justifyContent: "flexStart",
+        padding: "10px 0px",
+    })};
 `;
 
 const Left = styled.div`
@@ -26,6 +33,9 @@ const Left = styled.div`
 const Language = styled.span`
     font-size: 14px;
     cursor: pointer;
+    ${mobile({
+        display: "none",
+    })};
 `;
 
 const SearchContainer = styled.div`
@@ -34,11 +44,17 @@ const SearchContainer = styled.div`
     align-items: center;
     margin-left: 25px;
     padding: 5px;
+    ${mobile({
+        margin: "0px",
+    })}
 `;
 
 const Input = styled.input`
     border: none;
     outline: none;
+    ${mobile({
+        width: "50px",
+    })}
 `;
 
 const Center = styled.div`
@@ -48,6 +64,9 @@ const Center = styled.div`
 const Logo = styled.h1`
     font-weight: bold;
     text-align: center;
+    ${mobile({
+        fontSize: "24px",
+    })}
 `;
 
 const Right = styled.div`
@@ -56,11 +75,20 @@ const Right = styled.div`
     justify-content: flex-end;
     gap: 25px;
     align-items: center;
+    ${mobile({
+        justifyContent: "center",
+        flex: "2",
+        gap: "0px",
+    })}
 `;
 
 const MenuItem = styled.div`
     font-size: 14px;
     cursor: pointer;
+    ${mobile({
+        fontSize: "12px",
+        marginLeft: "10px",
+    })}
 `;
 
 // End of styled components
@@ -72,7 +100,7 @@ const Navbar = () => {
                 <Left>
                     <Language>EN</Language>
                     <SearchContainer>
-                        <Input />
+                        <Input placeholder="Search" />
                         <Search
                             style={{
                                 color: "gray",

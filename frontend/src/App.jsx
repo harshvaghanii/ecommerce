@@ -8,7 +8,7 @@ import Cart from "./pages/Cart";
 function App() {
     return (
         <Fragment>
-            <Cart />
+            <Home />
         </Fragment>
     );
 }
