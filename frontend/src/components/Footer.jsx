@@ -46,6 +46,7 @@ const SocialIcon = styled.div`
     align-items: center;
     justify-content: center;
     column-gap: 20;
+    cursor: pointer;
 `;
 
 const Center = styled.div`
