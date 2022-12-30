@@ -4,11 +4,12 @@ const Cart = require("../models/Cart");
 const {
     verifyTokenAndAuthorization,
     verifyTokenAndAdmin,
+    verifyToken,
 } = require("./verifyToken");
 
 // ADD PRODUCT
 
-router.post("/", verifyTokenAndAuthorization, async (req, res) => {
+router.post("/", verifyToken, async (req, res) => {
     const newCart = new Cart(req.body);
 
     try {
