@@ -12,6 +12,9 @@ const port = process.env.PORT || 4000;
 // Importing the Routes
 const authRoute = require("./routes/auth");
 const userRoute = require("./routes/user");
+const productRoute = require("./routes/product");
+const cartRoute = require("./routes/cart");
+const orderRoute = require("./routes/order");
 // End of Route Imports
 
 // DB Connection
@@ -37,9 +40,11 @@ app.use("/api/v1/auth", authRoute);
 
 app.use("/api/v1/user", userRoute);
 
-app.get("/api/v1/test", (req, res) => {
-    res.send("test is successful!");
-});
+app.use("/api/v1/products", productRoute);
+
+app.use("/api/v1/cart", cartRoute);
+
+app.use("/api/v1/order", orderRoute);
 
 // Listening to the server
 
