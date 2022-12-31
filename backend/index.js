@@ -6,8 +6,11 @@ const mongoose = require("mongoose");
 const dotenv = require("dotenv");
 dotenv.config();
 const port = process.env.PORT || 4000;
+const cors = require("cors");
 
 // End of Packages import
+
+app.use(cors());
 
 // Importing the Routes
 const authRoute = require("./routes/auth");
